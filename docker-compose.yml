@@ -14,11 +14,6 @@ x-minio-common: &minio-common
     - 9001
   networks:
     - internal
-  healthcheck:
-    test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-    interval: 30s
-    timeout: 20s
-    retries: 3
   deploy:
     resources:
       limits:
