@@ -51,7 +51,6 @@ services:
       - 9001
     networks:
       - internal
-      - minio
       - nginx
     depends_on:
       app-1:
